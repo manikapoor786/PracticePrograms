@@ -1,0 +1,45 @@
+package practice;
+import java.util.HashMap;
+
+public class copylongestsubstring {
+ 
+	    public void longestSubstring(String str)
+	    {
+	    	HashMap<Character, Integer> hm= new HashMap<Character,Integer>();
+	    	char ch[]= str.toCharArray();
+	    	int len= ch.length;
+	    	int longestsubstringlength=0;
+	    	String longestsubstring=null;
+	    	for(int i=1;i<len;i++)
+	    	{
+	    		char ch1=str.charAt(i);
+	    			if(!hm.containsKey(str.charAt(i)))
+	    			{
+	    				hm.put(ch1, i);
+	    			}
+	    			else
+	    			{
+	    				i=hm.get(ch1);
+	    				hm.clear();
+	    			}
+	    			
+	    		if(hm.size()>longestsubstringlength)
+	    		{
+	    			longestsubstringlength=hm.size();
+	    			longestsubstring=hm.keySet().toString();
+	    		}	
+	    	}
+	    	System.out.println(str);
+	    	System.out.println(longestsubstring);
+	    	System.out.println(longestsubstringlength);
+	    }
+	    
+	    
+	    
+	    public static void main(String[] args) 
+	    {   
+	    	copylongestsubstring ls= new copylongestsubstring();
+	    	ls.longestSubstring("shenam");
+	    }
+	}
+

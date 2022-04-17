@@ -1,0 +1,14 @@
+package stringPractice;
+
+public class sgr {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a="my name is manish";
+		
+		a=a.replaceFirst("is", "si");
+		System.out.println(a);
+
+	}
+
+}

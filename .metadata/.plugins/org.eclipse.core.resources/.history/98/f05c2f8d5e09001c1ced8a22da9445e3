@@ -1,0 +1,31 @@
+package practice;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
+public class copylongestsubstring {
+ 
+	    public void longestSubstring(String str)
+	    {
+	    	HashMap<Character, Integer> hm= new HashMap<Character,Integer>();
+	    	char ch[]= str.toCharArray();
+	    	int len= ch.length;
+	    	for(int i=1;i<len;i++)
+	    	{
+	    		char ch1=str.charAt(i);
+	    			if(!hm.containsKey(str.charAt(i)))
+	    			{
+	    				hm.put(, i);
+	    			}
+	    		
+	    	}
+	    }
+	    
+	    
+	    
+	    public static void main(String[] args) 
+	    {   
+	    	copylongestsubstring ls= new copylongestsubstring();
+	    	ls.longestSubstring("sheenam");
+	    }
+	}
+

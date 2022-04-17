@@ -1,0 +1,17 @@
+package practice;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		
+		String s="sheenam";
+		char ch[]= s.toCharArray();
+		int l=ch.length;
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package practice;
+
+public class ReverseString {
+	
+	public void withBuffer(String str)
+	{
+		
+	}
+	
+	public void withoutBuffer(String str)
+	{
+		
+	}
+
+	public static void main(String[] args) {
+		
+		String s="sheenam";
+		ReverseString rs= new ReverseString();
+		rs.withBuffer(s);
+		rs.withoutBuffer(s);
+		
+		
+		
+		
+
+	}
+
+}

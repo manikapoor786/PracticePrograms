@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;interview.automation.Mainpage&apos; to &apos;MainpageTest&apos;&#x0D;&#x0A;- Original project: &apos;automation&apos;&#x0D;&#x0A;- Original element: &apos;interview.automation.Mainpage&apos;&#x0D;&#x0A;- Renamed element: &apos;interview.automation.MainpageTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Mainpage&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java&lt;interview.automation{Mainpage.java[Mainpage" matchStrategy="1" name="MainpageTest" qualified="false" references="true" similarDeclarations="false" stamp="1638190077109" textual="false" version="1.0"/>
+</session>

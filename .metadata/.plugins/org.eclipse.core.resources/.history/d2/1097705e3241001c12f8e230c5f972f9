@@ -1,0 +1,26 @@
+package stringPractice;
+
+public class ReverseNumber {
+	int rev,rem=0;
+	
+	public int reverseNumberfn(int a)
+	{
+		while(a!=0)
+	{
+		rem= a%10;
+		a= a/10;
+		rev= rev*10 + rem;
+	}
+		return rev;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ReverseNumber rn= new ReverseNumber();
+		int a=rn.reverseNumberfn(12345);
+		System.out.println(a);
+		
+	}
+
+}

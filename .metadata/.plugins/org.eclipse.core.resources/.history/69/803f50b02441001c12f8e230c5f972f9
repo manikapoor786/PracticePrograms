@@ -1,0 +1,17 @@
+package stringPractice;
+
+public class sgr {
+	
+	public void filterDuplicate(int b[])
+	{
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		sgr s= new sgr();
+		int a[]= {1,4,2,9,1,1,4,6,2};
+		s.filterDuplicate(a);
+	}
+
+}

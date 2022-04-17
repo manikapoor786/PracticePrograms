@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DataDrivenExcelMapping.java&apos; to &apos;E2EProject1/src/main/java/resources&apos;&#x0D;&#x0A;- Original project: &apos;E2EProject1&apos;&#x0D;&#x0A;- Destination element: &apos;E2EProject1/src/main/java/resources&apos;&#x0D;&#x0A;- Original element: &apos;resources.DataDrivenExcelMapping.java&apos;" description="Copy compilation unit" destination="/src\/main\/java&lt;resources" element1="/src\/main\/java&lt;resources{DataDrivenExcelMapping.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1631984012950" units="1" version="1.0"/>
+</session>

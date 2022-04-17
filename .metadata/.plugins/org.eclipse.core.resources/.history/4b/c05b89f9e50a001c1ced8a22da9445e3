@@ -1,0 +1,31 @@
+package practice;
+public class BinarySearch {
+	    
+	    int binarySearch(int arr[], int first, int r, int x)
+	    {
+	        if (r >= first) {
+	            int mid = first + (r - first) / 2;
+	  
+	            if (arr[mid] == x)
+	                return mid;
+	            
+	            if (arr[mid] > x)
+	                return binarySearch(arr, first, mid - 1, x);
+	            	return binarySearch(arr, mid + 1, r, x);
+	        }
+	        return -1;
+	    }
+	  
+	    public static void main(String args[])
+	    {
+	    	BinarySearch ob = new BinarySearch();
+	        int arr[] = { 2, 3, 4, 10, 40 };
+	        int length = arr.length;
+	        int element = 10;
+	        int result = ob.binarySearch(arr, 0, length - 1, element);
+	        if (result == -1)
+	            System.out.println("Element not present");
+	        else
+	            System.out.println("Element found at index " + result);
+	    }
+	}

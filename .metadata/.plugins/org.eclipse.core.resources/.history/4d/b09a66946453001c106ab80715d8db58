@@ -1,0 +1,82 @@
+package interview.automation;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import junit.framework.Assert;
+import pageObjects.MainPageObjects;
+import resources.Base;
+
+public class MainpageTest extends Base {
+	int result = 0;
+	public ArrayList<Integer> list;
+	public WebDriver driver;
+
+	@BeforeTest
+	public void beforeCall() throws IOException {
+		driver = getDriver();
+	}
+
+	@Test
+	public void mainCall() throws IOException {
+		driver.get(prop.getProperty("url"));
+		MainPageObjects mpo = new MainPageObjects(driver);
+		List<WebElement> al = mpo.getTable();
+		int count = al.size();
+		list = new ArrayList<Integer>();
+		for (int i = 0; i < count; i++) {
+			String text = al.get(i).getText();
+			int num = Integer.parseInt(text);
+			list.add(num);
+		}
+
+		for (int i : list) {
+			result = result + i;
+		}
+		Assert.assertEquals(result, 235);
+	}
+	
+	@Test
+	public void printCourseText() throws IOException {
+		driver.get(prop.getProperty("url"));
+		MainPageObjects mpo = new MainPageObjects(driver);
+		List<WebElement> al = mpo.getTable();
+		int count = al.size();
+		HashMap<Integer,Integer> map= new HashMap<Integer,Integer>();
+		for (int i = 0; i < count; i++) {
+			String text = al.get(i).getText();
+			int num = Integer.parseInt(text);
+			map.put(i, num);
+		}
+		
+		for(Map.Entry m:map.entrySet())
+		{
+			System.out.println(m.getKey()+" "+m.getValue());
+		}
+	}
+	
+//	@Test
+//	public void dropDown()
+//	{
+//		MainPageObjects mpo = new MainPageObjects(driver);
+//		Select s= new Select(mpo.getdropdown());
+//		s.selectByIndex(1);
+//		System.out.println(s.getFirstSelectedOption().getText());
+//	}
+
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+	}
+}

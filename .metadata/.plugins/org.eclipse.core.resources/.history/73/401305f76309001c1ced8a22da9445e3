@@ -1,0 +1,34 @@
+package practice;
+
+import java.util.ArrayList;
+
+public class ReverseString {
+	
+	public void withBuffer(String str)
+	{
+		StringBuffer buffer= new StringBuffer(str);
+		buffer.reverse();
+		System.out.println(buffer);
+	}
+	
+	public void withoutBuffer(String str)
+	{
+		char ch[]= str.toCharArray();
+		int len=ch.length;
+		System.out.println(len);
+		ArrayList<Character> al= new ArrayList<Character>();
+		for(int i=len-1;i>=s0;i--)
+		{
+			al.add(ch[i]);
+		}
+		System.out.println(al.toString());
+	}
+
+	public static void main(String[] args) {
+		
+		String s="sheenam";
+		ReverseString rs= new ReverseString();
+		//rs.withBuffer(s);
+		rs.withoutBuffer(s);
+	}
+}

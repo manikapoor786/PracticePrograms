@@ -1,0 +1,25 @@
+package practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+
+public class ActionMouse {
+	
+	public static WebDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\manish.kapoor\\\\Downloads\\\\chromedriver_win32 (2)\\\\chromedriver.exe");
+		driver= new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		
+		Actions a= new Actions(driver);
+		a.moveToElement(driver.findElement(By.xpath("//a[@id='nav-link-accountList']"))).build().perform();
+		Thread.sleep(2000);
+		Assert.assertEquals(driver.findElement(By.xpath("//a[@id='nav-item-signout']/span")).getText(), "Sign Out");	
+	}
+
+}

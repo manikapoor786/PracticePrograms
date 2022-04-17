@@ -1,0 +1,22 @@
+package practice;
+
+import java.util.ArrayList;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		
+		String s="sheenam";
+		char ch[]= s.toCharArray();
+		int l=ch.length;
+		
+		
+		for(int i=l;i>1;i--)
+		{
+			ch[l-i]=ch[i];
+		}
+		
+
+	}
+
+}
